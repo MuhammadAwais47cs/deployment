@@ -13,6 +13,10 @@ const productSchema = mongoose.Schema({
     type: String,
     required: [true, "Please Enter product Description"],
   },
+  stock: {
+    type: String,
+    required: [true, "Please Enter product Stock"],
+  },
   store: {
     type: String,
     required: [true, "Please Enter product Description"],
@@ -21,10 +25,11 @@ const productSchema = mongoose.Schema({
     type: String,
     required: [true, "Please Enter product Description"],
   },
-  rating: {
+  DeliveryCharges: {
     type: String,
-    required: [true, "Please Enter product rating"],
+    required: [true, "Please Enter product DeliveryCharges"],
   },
+
   imgUrl: {
     type: String,
     required: [true, "Please Enter product imgUrl"],
@@ -38,7 +43,6 @@ const productSchema = mongoose.Schema({
     required: [true, "Please Enter product Price"],
     maxLength: [8, "Price cannot exceed 8 characters"],
   },
-  
 });
 
 module.exports = mongoose.model("Product", productSchema);
